@@ -92,3 +92,27 @@ while (i<=10){
 for (var i=1; i<=10; i++){
     console.log(i)
 }
+
+// Function calling is similar too... But you dont have to use the def word
+// But say its a function
+
+
+function square(n){
+    return n*n
+}
+
+console.log(square(5));
+
+
+// A recursive approach to finding factorial using function is following
+
+function factorial(n){
+    if ((n==1) || (n==0)){
+        return n
+    }
+    else{
+        return(n*factorial(n-1))
+    }
+}
+
+console.log(factorial(5))
