@@ -25,15 +25,26 @@ function brickCalculator(n){
         return "Matir tole kiya building banaiba?"
     } else if (n<=10) {
             total = n*15;
-            break;
-        case n<=20:
+    } else if (n<=20){
             total = (n-10)*12 + 10*15;
-            break;
-        case n>20:
+    } else if (n>20){
             total = 10*15 + 10*12 + (n-20)*10;
-            break;
     } return total*1000;
-    }
 }
 
-console.log(brickCalculator(100))
+console.log(brickCalculator(11))
+
+function tinyFriend(Array){
+    if (Array.length == 0) {
+        return "Bro! You got no friend"
+    } else {
+        let tiny = Array[1]
+        for(i=0; i<Array.length;i++) {
+            if (Array[i].length < tiny.length){
+                tiny = Array[i];
+    } 
+    } return tiny;
+}
+}
+
+console.log(tinyFriend([]))
