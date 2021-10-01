@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dom Foundation</title>
     <script>
-        alert("This is dom practice")
-        debugger;
+        console.log(44)
     </script>
 </head>
 <body>
@@ -17,13 +16,27 @@
         <p>We can use js on top or in between Object or after everything</p>
         <script>
             console.log(45);
-            debugger;
         </script>
     </div>
     <div class="article-2">
         <h3>What is DOM?</h3>
         <p>Dom ==> Document Object Model <br> It means Dom Converts the whole HTML and CSS into Javascripts and execute its code.</p>
-        <p></p>
+        <p>Lets use <br> 
+            <br>document.getElementsByTagName('tag') ==> returns a html list
+            <br>document.getElementById('#id') ==> returns a specific node
+            <br>document.getElementByClassName('.class') ==> returns a NodeList
+            <br>document.querySelector('class tag') ==> returns the first node
+            <br>document.querySelectorAll('class tag') ==> returns NodeList
+        </p>
+        <script>
+            elem = document.getElementsByTagName('h3');
+            console.log(elem);
+            console.log(19);
+            for(i = 0; i<=elem.length; i++){
+                console.log(elem[i]);
+                elem[i].style.backgroundColor = 'lightblue'
+            }
+        </script>
     </div>
     <div class="article-3">
         <h3></h3>
