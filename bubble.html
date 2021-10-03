@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble</title>
+</head>
+<body>
+    <div id="container">
+        <h2>My List</h2>
+        <ul id="list">
+            <li id="first" class="item">Lorem ipsum dolor sit amet.</li>
+            <li class="item">Minima voluptatibus quasi vitae culpa?</li>
+            <li class="item">Deserunt voluptas vitae fugit cumque!</li>
+            <li class="item">Qui, dolor nobis. Aliquam, numquam?</li>
+            <li class="item">Modi rem id porro inventore?</li>
+        </ul>
+    </div>
+    <script>
+        document.getElementById('first').addEventListener('click', function(){
+            console.log("list is clicked")
+            event.stopPropagation()
+        })
+        document.getElementById('container').addEventListener('click', function(){
+            console.log("div is clicked")
+        })
+        document.getElementById('list').addEventListener('click', function(){
+            console.log("ul is clicked")
+        })
+    </script>
+</body>
+</html>

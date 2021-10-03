@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event practice</title>
+</head>
+<body>
+    <h3>There are many ways to handle an event. Lets use some button to see it through</h3>
+    <button onclick="alert('This is added directly')">Click Me - 1</button>
+    <br>
+    
+    <button onclick="handler()">Click Me - 2</button>
+    <script>
+        function handler() {
+            alert('This is added by function');     
+        }
+    </script>
+    <br>
+
+    <button id="third">Click Me - 3</button>
+    <script>
+        function changeBG(){
+            header = document.querySelector("h3");
+            header.style.backgroundColor = 'lightblue';
+            alert("This is added by ID");
+        }
+
+        const event= document.getElementById("third");
+        event.onclick = changeBG;
+    </script>
+    <br>
+    <p>Why use function instead of function()</p>
+    <p>Because, we don't want to invoke the function immediately</p>
+    
+    <button id="fourth">Click Me - 4</button>
+    <script>
+        const btn = document.getElementById("fourth");
+        btn.addEventListener("click", changeBG);
+    </script>
+    <br>
+    <p>This time we did it with "addEventListener"/p>
+    
+    <button>Click Me - 5</button>
+    <br>
+    
+</body>
+</html>
