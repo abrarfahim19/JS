@@ -4,7 +4,7 @@ console.log(doubleIt(4));
 
 //Multi parameter
 const add = (x,y=0) => x+y;
-console.log(add(2));
+console.log(add(2,5));
 
 // No parameter
 const five = () => 5;
